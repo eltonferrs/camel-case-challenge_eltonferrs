@@ -1,8 +1,21 @@
 
 // Desenvolva aqui a sua lógica
 function camelCase(string) {
-  
-}
+    let smallString=string
+    let novapalavra=""
+    for(let i=0 ; i<smallString.length ; i++){
+        if(i==0){
+            novapalavra= novapalavra+smallString[i].toLowerCase()
+            i++
+        }
+        else if(smallString[i]==" "){
+            novapalavra= novapalavra+smallString[i+1].toUpperCase()
+            i+=2
+        } 
+        novapalavra= novapalavra+smallString[i]
+    }
+    return novapalavra
+}  
 
 
 // Testes, não precisa comentar, apenas rodar seu código e saberá o retorno!
